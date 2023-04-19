@@ -17,6 +17,15 @@ const FormsFormik = () => {
 
   const [display, setDisplay] = useState();
 
+  // -- API
+  // https://jsonplaceholder.typicode.com/posts
+  // -- HTTP methods
+  // GET	/posts ->> get data
+  // POST	/posts ->> add data
+  // PUT	/posts/1 ->> edit one data only
+  // PATCH	/posts/1 ->> edit group of data
+  // DELETE	/posts/1 ->> delete data
+
   return (
     <div>
       <Formik
