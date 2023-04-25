@@ -21,7 +21,7 @@ const HomepageContainer = () => {
           <div className="h-48" />
         )}
         <button
-          className="flex items-center justify-center w-full px-4 py-1 mx-1 bg-white rounded-full shadow"
+          className="flex items-center justify-center py-1 mx-1 transition ease-in bg-white rounded-full shadow px-[15rem] duration-900 hover:shadow-lg"
           onClick={() => setCount(count + 1)}
           onMouseEnter={() => {
             setDisplay(false)

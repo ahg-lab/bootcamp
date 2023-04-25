@@ -21,6 +21,9 @@ module.exports = {
           950: '#080A20',
         },
       },
+      padding: {
+        63: '15.5rem',
+      },
     },
   },
   plugins: [],
