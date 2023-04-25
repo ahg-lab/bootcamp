@@ -1,14 +1,7 @@
-import Title from "@components/title";
+import HomepageContainer from '@containers/home'
 
-export default function Homepage() {
-  return (
-    <>
-      <div>
-        <p>HOMEPAGE</p>
-      </div>
-      <div>
-        <Title name="A" school="B" mall="C" />
-      </div>
-    </>
-  );
+const HomePage = () => {
+  return <HomepageContainer />
 }
+
+export default HomePage

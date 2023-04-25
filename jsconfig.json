@@ -3,6 +3,7 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@containers/*": ["./src/containers/*"],
+      "@styles/*": ["./src/styles/*"],
     }
   }
 }
