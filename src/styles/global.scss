@@ -1,14 +1,18 @@
 // 1.yarn add tailwindcss postcss autoprefixer
 // 2. npx tailwindcss init
 // 3. add the ff in the global style
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 // 4.   mode: "jit",
 //      content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
 // 5. create a postcss.config.js and copy content of file
 // 6. add prettier and headwind
-@import "./colors.scss";
+@import './colors.scss';
+
+.new {
+  font-family: Cinzel, Arial, Helvetica, sans-serif;
+}
 
 p {
   color: $red;

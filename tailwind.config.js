@@ -24,6 +24,9 @@ module.exports = {
       padding: {
         63: '15.5rem',
       },
+      fontFamily: {
+        cinzel: ['Cinzel'],
+      },
     },
   },
   plugins: [],
