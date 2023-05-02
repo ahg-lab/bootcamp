@@ -1,4 +1,5 @@
 import FooterItem from '@components/footer-item'
+import NavBar from '@components/navbar'
 import Title from '@components/title'
 import { useState } from 'react'
 
@@ -8,8 +9,9 @@ const HomepageContainer = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center py-20">
         <p className={`font-${count < 5 ? 'bold' : 'semibold'}`}>HOMEPAGAE</p>
+        <NavBar />
         <p className="text-hehe">{count}</p>
         {display ? (
           <div className="hidden h-48 grid-cols-4 gap-10 lg:grid">
