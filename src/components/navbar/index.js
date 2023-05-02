@@ -1,14 +1,28 @@
+import axios from 'axios'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 // client side rendering
 // server side rendering
 
 const NavBar = () => {
+  const [users, setUsers] = useState()
+
   const menu = [
     { id: 1, name: 'home', link: '/' },
     { id: 2, name: 'about', link: '/about' },
     { id: 3, name: 'contact', link: '/contact' },
   ]
+
+  const getUsers = () => {
+    axios.get('https://api.ahglab.com/api:W7k9W8HQ/users').then(function (response) {
+      setUsers(response?.data)
+    })
+  }
+
+  useEffect(() => {
+    getUsers()
+  }, [])
 
   return (
     <div className="flex py-20 space-x-5">
@@ -27,7 +41,14 @@ const NavBar = () => {
           </Link>
         )
       })}
-      <a href="/">HOMEEE</a>
+      {users &&
+        users.map((value, key) => {
+          return (
+            <Link key={key} href={`/dynamic/${value.first_name}`}>
+              {value.first_name}
+            </Link>
+          )
+        })}
     </div>
   )
 }

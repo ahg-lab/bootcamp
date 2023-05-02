@@ -7,10 +7,19 @@ const AboutPage = ({ usersData }) => {
 
   return (
     <div>
-      {console.log('usersData == ', usersData)}
       <p>About</p>
       <h1>ID: {router.query.id}</h1>
       <h1>ID: {router.query.hehe}</h1>
+      <div className="flex flex-col pt-10">
+        {usersData &&
+          usersData.map((value, key) => {
+            return (
+              <p key={key} className="text-sm text-black">
+                {value.first_name}
+              </p>
+            )
+          })}
+      </div>
       <AboutContainer />
     </div>
   )
@@ -19,9 +28,8 @@ const AboutPage = ({ usersData }) => {
 export default AboutPage
 
 export async function getServerSideProps() {
-  let data = ''
- 
-  axios.get('https://api.ahglab.com/api:W7k9W8HQ/users').then(function (response) {
+  let data = []
+  await axios.get('https://api.ahglab.com/api:W7k9W8HQ/users').then(function (response) {
     data = response.data
   })
 
